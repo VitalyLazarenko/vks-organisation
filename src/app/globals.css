@@ -45,13 +45,17 @@ body {
 
 .strokeText {
   color: transparent; /* We make the text transparent */
-  -webkit-text-stroke: 2px #00605D; /* Text stroke for Chrome and Safari */
+  -webkit-text-stroke: 1px #00605D; /* Text stroke for Chrome and Safari */
   /*text-stroke: 2px #000; !* Text stroke for other browsers *!*/
 }
 
 .strokeTextWhite {
   color: transparent; /* We make the text transparent */
-  -webkit-text-stroke: 2px #FFF; /* Text stroke for Chrome and Safari */
+  -webkit-text-stroke: 1px #FFF; /* Text stroke for Chrome and Safari */
   /*text-stroke: 2px #000; !* Text stroke for other browsers *!*/
+}
+
+.transitionClass {
+  transition: all .45s ease;
 }
 

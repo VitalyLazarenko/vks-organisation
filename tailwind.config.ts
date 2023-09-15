@@ -12,8 +12,10 @@ const config: Config = {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-        'bg_main': 'url("/assets/backgrounds/BG_Main Screen.png")',
-        'bg_propose': 'url("/assets/backgrounds/BG_Propose.png")'
+        'img_main': 'url("/assets/backgrounds/BG_Main Screen.png")',
+        'img_propose': 'url("/assets/backgrounds/BG_Propose.png")',
+        'img_choose': 'url("/assets/backgrounds/BG_Choose.jpg")',
+        'img_about': 'url("/assets/backgrounds/BG_About.jpg")',
       },
       colors: {
         white: '#FFF',

@@ -1,14 +1,12 @@
 import {FC, ReactNode} from "react";
 
 interface IProps {
-  id: string
   children: ReactNode,
 }
 
-export const FullWidthContainer: FC<IProps> = ({children, id= ""}) => {
+export const FullWidthContainer: FC<IProps> = ({children}) => {
   return (
       <div
-        id={id}
         className="h-screen w-full"
       >
         {children}
