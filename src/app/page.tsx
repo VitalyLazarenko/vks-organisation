@@ -1,6 +1,4 @@
-import Image from 'next/image'
 import {FullWidthContainer} from "../components/fullScreenContainer";
-import Head from "next/head";
 import {HeaderComponent} from "../components/headerComponent";
 import {ProposeLayout} from "../layouts/propose.layout";
 import {ChooseLayout} from "../layouts/choose.layout";

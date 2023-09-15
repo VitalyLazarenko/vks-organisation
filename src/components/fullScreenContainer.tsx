@@ -9,7 +9,7 @@ export const FullWidthContainer: FC<IProps> = ({children, id= ""}) => {
   return (
       <div
         id={id}
-        className="h-screen w-screen"
+        className="h-screen w-full"
       >
         {children}
       </div>

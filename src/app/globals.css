@@ -16,12 +16,42 @@
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+
+/* nunito-sans.css */
+@font-face {
+  font-family: 'Nunito Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/nunito_sans/NunitoSans-Italic-VariableFont_YTLC,opsz,wdth,wght.ttf') format('truetype');
 }
+
+@font-face {
+  font-family: 'Nunito Sans';
+  font-style: normal;
+  font-weight: 900;
+  src: url('/fonts/nunito_sans/NunitoSans-VariableFont_YTLC,opsz,wdth,wght.ttf') format('truetype');
+}
+
+body {
+  font-family: 'Nunito Sans', sans-serif;
+  color: rgb(var(--foreground-rgb));
+  overflow-x: hidden;
+  background: linear-gradient(
+     to bottom,
+     transparent,
+     rgb(var(--background-end-rgb))
+  ) rgb(var(--background-start-rgb));
+}
+
+.strokeText {
+  color: transparent; /* We make the text transparent */
+  -webkit-text-stroke: 2px #00605D; /* Text stroke for Chrome and Safari */
+  /*text-stroke: 2px #000; !* Text stroke for other browsers *!*/
+}
+
+.strokeTextWhite {
+  color: transparent; /* We make the text transparent */
+  -webkit-text-stroke: 2px #FFF; /* Text stroke for Chrome and Safari */
+  /*text-stroke: 2px #000; !* Text stroke for other browsers *!*/
+}
+
