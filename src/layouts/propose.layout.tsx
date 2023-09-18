@@ -2,7 +2,7 @@ import {FullWidthContainer} from "../components/fullScreenContainer";
 
 export const ProposeLayout = () => {
   return (
-    <FullWidthContainer>
+    <FullWidthContainer styles={""}>
       <div className={"h-screen w-full bg-img_propose bg-cover bg-top xl:px-36 2xl:px-44 flex justify-center items-center"}>
         <div className={"w-full h-screen xl:pb-10 xl:pt-16 2xl:pt-20 2xl:pb-12 flex flex-col"}>
           <div className={"flex justify-end mt-3"}>
@@ -14,14 +14,14 @@ export const ProposeLayout = () => {
               </p>
 
               <div>
-                <p className={"xl:text-lx 2xl:text-2xl text-main_dark font-normal"}>-Web Designer, Developer, and</p>
-                <p className={"xl:text-lx 2xl:text-2xl text-main_dark font-normal"}>-3D Designer, we provide
+                <p className={"xl:text-lx 2xl:text-2xl text-main_dark font-normal"}>- Web Designer, Developer, and</p>
+                <p className={"xl:text-lx 2xl:text-2xl text-main_dark font-normal"}>- 3D Designer, we provide
                   services</p>
-                <p className={"xl:text-lx 2xl:text-2xl text-main_dark font-normal"}>-for developing and tailoring
+                <p className={"xl:text-lx 2xl:text-2xl text-main_dark font-normal"}>- for developing and tailoring
                   websites</p>
-                <p className={"xl:text-lx 2xl:text-2xl text-main_dark font-normal"}>-according to our client`s criteria.
+                <p className={"xl:text-lx 2xl:text-2xl text-main_dark font-normal"}>- according to our client`s criteria.
                   To make</p>
-                <p className={"xl:text-lx 2xl:text-2xl text-main_dark font-normal"}>-our clients stand out amidst their
+                <p className={"xl:text-lx 2xl:text-2xl text-main_dark font-normal"}>- our clients stand out amidst their
                   competitors,</p>
               </div>
             </div>

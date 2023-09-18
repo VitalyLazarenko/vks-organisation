@@ -12,10 +12,13 @@ const config: Config = {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-        'img_main': 'url("/assets/backgrounds/BG_Main Screen.png")',
+        'img_main': 'url("/assets/backgrounds/BG_Main.png")',
+        'img_main_2': 'url("/assets/backgrounds/BG_Main_2.jpg")',
+        'img_main_3': 'url("/assets/backgrounds/BG_Main_3.jpg")',
         'img_propose': 'url("/assets/backgrounds/BG_Propose.png")',
         'img_choose': 'url("/assets/backgrounds/BG_Choose.jpg")',
         'img_about': 'url("/assets/backgrounds/BG_About.jpg")',
+        'img_contact': 'url("/assets/backgrounds/BG_Contact.jpg")',
       },
       colors: {
         white: '#FFF',

@@ -31,29 +31,35 @@ export const HeaderComponent: FC<IHeaderProps> = ({isShowFullHeader}) => {
   }, [isShowFullHeader, logoRef, navigatorRef])
 
   return (
-    <div className={"w-full h-28 xl:px-36 2xl:px-44 fixed flex justify-end items-center"}>
-      <img ref={logoRef} className={"absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transitionClass"} src="/assets/Logo_VKS.svg" alt=""/>
+    <div className={"w-full h-28 xl:px-36 2xl:px-44 fixed flex justify-end items-center z-10"}>
+      <img
+        ref={logoRef}
+        className={"cursor-pointer absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transitionClass hover:scale-105"}
+        src="/assets/Logo_VKS.svg"
+        alt="logo"
+        onClick={() => scrollToAnchor('#main')}
+      />
       <div ref={navigatorRef} className={"flex justify-end items-center w-1/2 opacity-0 transitionClass"}>
         <div
-          className={"cursor-pointer font-normal xl:text-base 2xl:text-xl text-main_dark mx-2.5"}
+          className={"cursor-pointer font-normal xl:text-base 2xl:text-xl text-main_dark mx-2.5 transitionClass hover:scale-105"}
           onClick={() => scrollToAnchor('#propose')}
         >
           Our propose
         </div>
         <div
-          className={"cursor-pointer font-normal xl:text-base 2xl:text-xl text-main_dark mx-2.5"}
+          className={"cursor-pointer font-normal xl:text-base 2xl:text-xl text-main_dark mx-2.5 transitionClass hover:scale-105"}
           onClick={() => scrollToAnchor('#choose')}
         >
           Choose us
         </div>
         <div
-          className={"cursor-pointer font-normal xl:text-base 2xl:text-xl text-main_dark mx-2.5"}
+          className={"cursor-pointer font-normal xl:text-base 2xl:text-xl text-main_dark mx-2.5 transitionClass hover:scale-105"}
           onClick={() => scrollToAnchor('#about')}
         >
           About us
         </div>
         <div
-          className={"cursor-pointer font-normal xl:text-base 2xl:text-xl text-main_dark mx-2.5"}
+          className={"cursor-pointer font-normal xl:text-base 2xl:text-xl text-main_dark mx-2.5 transitionClass hover:scale-105"}
           onClick={() => scrollToAnchor('#contact')}
         >
           Contact us
