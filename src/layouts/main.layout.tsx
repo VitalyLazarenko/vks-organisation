@@ -10,7 +10,7 @@ export const MainLayout = () => {
         className={"h-screen w-full bg-img_main bg-cover bg-center xl:px-36 2xl:px-44 flex justify-center items-center"}>
         <div className="h-full w-full flex">
           <div className="w-1/2 h-full flex justify-center items-center">
-            <h1 className={"font-black uppercase text-6xl strokeText"}>
+            <h1 className={"uppercase text-6xl strokeText"}>
               Enhancing the Future through Technology
             </h1>
           </div>

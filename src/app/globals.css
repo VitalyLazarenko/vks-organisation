@@ -32,6 +32,13 @@
   src: url('/fonts/nunito_sans/NunitoSans-VariableFont_YTLC,opsz,wdth,wght.ttf') format('truetype');
 }
 
+@font-face {
+  font-family: 'VKS Sans';
+  font-style: normal;
+  font-weight: bold;
+  src: url('/fonts/VksSans-Regular/VksSans-Regular.ttf') format('truetype');
+}
+
 body {
   font-family: 'Nunito Sans', sans-serif;
   color: rgb(var(--foreground-rgb));
@@ -44,14 +51,16 @@ body {
 }
 
 .strokeText {
-  color: transparent; /* We make the text transparent */
-  -webkit-text-stroke: 1px #00605D; /* Text stroke for Chrome and Safari */
+  font-family: 'VKS Sans', sans-serif;
+  font-weight: bold;
+  color: #00605D; /* We make the text transparent */
   /*text-stroke: 2px #000; !* Text stroke for other browsers *!*/
 }
 
 .strokeTextWhite {
-  color: transparent; /* We make the text transparent */
-  -webkit-text-stroke: 1px #FFF; /* Text stroke for Chrome and Safari */
+  font-family: 'VKS Sans', sans-serif;
+  font-weight: bold;
+  color: #FFF; /* Text stroke for Chrome and Safari */
   /*text-stroke: 2px #000; !* Text stroke for other browsers *!*/
 }
 
