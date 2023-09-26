@@ -9,19 +9,19 @@ export const ProposeLayout = () => {
             <div className={"w-7/12 flex flex-col justify-start items-start"}>
               <h2 className={"font-black uppercase xl:text-3xl 2xl:text-4xl strokeText"}>What we propose</h2>
 
-              <p className={"xl:text-lx 2xl:text-2xl text-main_dark font-normal mt-16 my-8"}>
+              <p className={"xl:text-lg 2xl:text-2xl text-main_dark font-normal mt-16 my-8"}>
                 A vibrant team of friends specializing in cutting-edge web development. Consisting of Project Manager.
               </p>
 
               <div>
-                <p className={"xl:text-lx 2xl:text-2xl text-main_dark font-normal"}>- Web Designer, Developer, and</p>
-                <p className={"xl:text-lx 2xl:text-2xl text-main_dark font-normal"}>- 3D Designer, we provide
+                <p className={"xl:text-lg 2xl:text-2xl text-main_dark font-normal"}>- Web Designer, Developer, and</p>
+                <p className={"xl:text-lg 2xl:text-2xl text-main_dark font-normal"}>- 3D Designer, we provide
                   services</p>
-                <p className={"xl:text-lx 2xl:text-2xl text-main_dark font-normal"}>- for developing and tailoring
+                <p className={"xl:text-lg 2xl:text-2xl text-main_dark font-normal"}>- for developing and tailoring
                   websites</p>
-                <p className={"xl:text-lx 2xl:text-2xl text-main_dark font-normal"}>- according to our client`s criteria.
+                <p className={"xl:text-lg 2xl:text-2xl text-main_dark font-normal"}>- according to our client`s criteria.
                   To make</p>
-                <p className={"xl:text-lx 2xl:text-2xl text-main_dark font-normal"}>- our clients stand out amidst their
+                <p className={"xl:text-lg 2xl:text-2xl text-main_dark font-normal"}>- our clients stand out amidst their
                   competitors,</p>
               </div>
             </div>

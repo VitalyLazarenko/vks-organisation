@@ -24,6 +24,8 @@ const config: Config = {
         white: '#FFF',
         main_light: '#00B09B',
         main_dark: '#00605D',
+        line_normal: '#00B09B',
+        line_light: '#99DFD7',
       }
     },
   },
