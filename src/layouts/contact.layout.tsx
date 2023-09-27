@@ -6,7 +6,7 @@ export const ContactLayout = () => {
     <FullWidthContainer styles={""}>
       <div className={"h-screen w-full bg-img_contact bg-cover bg-top relative"}>
         <div className={"w-full h-full xl:px-36 2xl:px-44"}>
-          <div className={"w-3/5 flex flex-col items-center"}>
+          <div className={"w-7/12 flex flex-col items-center"}>
             <h2 className={"mt-20 mb-8 font-black uppercase xl:text-3xl 2xl:text-4xl strokeText"}>Contact us</h2>
             <div
               className={"w-full min-h-1/2 border border-main_light uppercase p-12 flex flex-col justify-between items-center"}>
