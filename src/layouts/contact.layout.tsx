@@ -8,17 +8,18 @@ export const ContactLayout = () => {
         <div className={"w-full h-full xl:px-36 2xl:px-44"}>
           <div className={"w-3/5 flex flex-col items-center"}>
             <h2 className={"mt-20 mb-8 font-black uppercase xl:text-3xl 2xl:text-4xl strokeText"}>Contact us</h2>
-            <div className={"w-full min-h-1/2 bg-rose-500/30 uppercase p-12 flex flex-col justify-center items-center"}>
-              <div className={"w-full bg-blue-700/30 flex justify-between items-center"}>
+            <div
+              className={"w-full min-h-1/2 border border-main_light uppercase p-12 flex flex-col justify-between items-center"}>
+              <div className={"w-full flex justify-between items-center"}>
                 <input
                   type="text"
                   placeholder={"Your name"}
-                  className={"w-2/5 h-8"}
+                  className={"w-5/12 h-8 px-2 bg-transparent text-main_dark border-b border-main_light hover:border-main_dark focus:outline-none focus:w-1/2 transitionClass"}
                 />
                 <input
                   type="text"
                   placeholder={"Your email"}
-                  className={"w-2/5 h-8"}
+                  className={"w-5/12 h-8 px-2 bg-transparent text-main_dark border-b border-main_light hover:border-main_dark focus:outline-none focus:w-1/2 transitionClass"}
                 />
               </div>
               <div className={"w-full my-8"}>
@@ -27,24 +28,39 @@ export const ContactLayout = () => {
                   name="body_message"
                   placeholder={"Your message"}
                   rows={5}
-                  className={"w-full h-full box-border p-2"}
+                  className={"w-full h-full bg-transparent text-main_dark box-border p-2 border border-main_light focus:outline-none"}
                 />
               </div>
-              <div className={""}>
-                <input type="radio" id="radio1" className={""}/>
-                <label htmlFor="radio1" className={""}>Design</label>
-
-                <input type="radio" id="radio2" className={""}/>
-                <label htmlFor="radio2" className={""}>Development</label>
-
-                <input type="radio" id="radio3" className={""}/>
-                <label htmlFor="radio3" className={""}>Full cycle</label>
-
-                <input type="radio" id="radio4" className={""}/>
-                <label htmlFor="radio4" className={""}>Another</label>
+              <div className={"w-full flex justify-between items-center"}>
+                <div className={"flex"}>
+                  <div className={"mr-3 w-6 h-6 border border-main_light flex justify-center items-center"}>
+                    <div className={"w-2 h-2 bg-main_dark rotate-45"}/>
+                  </div>
+                  <label htmlFor="radio1" className={"text-base text-main_light capitalize font-extralight"}>Design</label>
+                </div>
+                <div className={"flex"}>
+                  <div className={"mr-3 w-6 h-6 border border-main_light flex justify-center items-center"}>
+                    <div className={"w-2 h-2 bg-main_dark rotate-45"}/>
+                  </div>
+                  <label htmlFor="radio2" className={"text-base text-main_light capitalize font-extralight"}>Development</label>
+                </div>
+                <div className={"flex"}>
+                  <div className={"mr-3 w-6 h-6 border border-main_light flex justify-center items-center"}>
+                    <div className={"w-2 h-2 bg-main_dark rotate-45"}/>
+                  </div>
+                  <label htmlFor="radio3" className={"text-base text-main_light capitalize font-extralight"}>Full cycle</label>
+                </div>
+                <div className={"flex"}>
+                  <div className={"mr-3 w-6 h-6 border border-main_light flex justify-center items-center"}>
+                    <div className={"w-2 h-2 bg-main_dark rotate-45"}/>
+                  </div>
+                  <label htmlFor="radio4" className={"text-base text-main_light capitalize font-extralight"}>Another</label>
+                </div>
               </div>
               <div className={""}>
-                {/*<SendButton disable={false} title={"Send"} click={() => console.log('SEND')}></SendButton>*/}
+                <button className={"px-9 py-1 mt-6 border border-main_light text-base text-main_light capitalize font-extralight"}>
+                  Send
+                </button>
               </div>
             </div>
           </div>
