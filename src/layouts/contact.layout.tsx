@@ -58,7 +58,7 @@ export const ContactLayout = () => {
                 </div>
               </div>
               <div className={""}>
-                <button className={"px-9 py-1 mt-6 border border-main_light text-base text-main_light capitalize font-extralight"}>
+                <button className={"px-9 py-1 mt-9 border border-main_light text-base text-main_light capitalize font-extralight"}>
                   Send
                 </button>
               </div>
