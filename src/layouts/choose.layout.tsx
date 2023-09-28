@@ -9,7 +9,7 @@ export const ChooseLayout = () => {
           <div className={"w-full h-full py-14"}>
             <div className={"w-full h-1/2 flex justify-evenly"}>
               <div className={"w-1/4 h-full flex flex-col items-center justify-center"}>
-                <img src="/assets/choose/24-7.svg" alt=""/>
+                <img src="/assets/choose/24_7.svg" alt=""/>
                 <h2 className={"xl:text-base 2xl:text-xl mt-5 text-white font-extralight text-center"}>
                   We are in touch with you 24/7. And it`s OK if you are far from the technical knowledge and terms
                 </h2>

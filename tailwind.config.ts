@@ -19,6 +19,7 @@ const config: Config = {
         'img_choose': 'url("/assets/backgrounds/BG_Choose.jpg")',
         'img_about': 'url("/assets/backgrounds/BG_About.jpg")',
         'img_contact': 'url("/assets/backgrounds/BG_Contact.jpg")',
+        'img_achievements': 'url("/assets/backgrounds/BG_Our Achievements.svg")',
       },
       colors: {
         white: '#FFF',

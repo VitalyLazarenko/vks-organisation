@@ -128,18 +128,48 @@ export const AboutLayout = () => {
             <h2 className={"2xl:mt-20 xl:mt-16 font-black uppercase xl:text-3xl 2xl:text-4xl strokeTextWhite"}>About
               Us</h2>
             <div className={"w-full h-52 mt-12 mb-10 xl:px-24 flex justify-evenly items-center"}>
-              <div className={"h-full w-52 bg-indigo-500/40 uppercase flex justify-center items-center"}>
-                Avatar
+              <div className={"whiteFrameWrapper h-full w-52"}>
+                <div className={"whiteFrameWrapper-diagonal h-full w-52"}>
+                  <div className={"whiteFrameContainer h-full w-52"}>
+                    <div className={"whiteFrameContainer-diagonal w-full h-full p-4 uppercase flex justify-center items-center"}>
+                      <img
+                        src="/assets/about%20us/avatar_1.jpg"
+                        alt="avatar_1"
+                        className={"w-full h-auto"}
+                      />
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div className={"h-full w-52 bg-indigo-500/40 uppercase flex justify-center items-center"}>
-                Avatar
+              <div className={"whiteFrameWrapper h-full w-52"}>
+                <div className={"whiteFrameWrapper-diagonal h-full w-52"}>
+                  <div className={"whiteFrameContainer h-full w-52"}>
+                    <div className={"whiteFrameContainer-diagonal w-full h-full p-4 uppercase flex justify-center items-center"}>
+                      <img
+                        src="/assets/about%20us/avatar_2.jpg"
+                        alt="avatar_1"
+                        className={"w-full h-auto"}
+                      />
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div className={"h-full w-52 bg-indigo-500/40 uppercase flex justify-center items-center"}>
-                Avatar
+              <div className={"whiteFrameWrapper h-full w-52"}>
+                <div className={"whiteFrameWrapper-diagonal h-full w-52"}>
+                  <div className={"whiteFrameContainer h-full w-52"}>
+                    <div className={"whiteFrameContainer-diagonal w-full h-full p-4 uppercase flex justify-center items-center"}>
+                      <img
+                        src="/assets/about%20us/avatar_3.jpg"
+                        alt="avatar_1"
+                        className={"w-full h-auto"}
+                      />
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
             <div
-              className={"w-full xl:text-lg 2xl:text-2xl text-white font-light flex justify-evenly items-center text-center"}>
+              className={"w-full xl:text-lg 2xl:text-2xl mt-6 text-white font-light flex justify-evenly items-center text-center"}>
               A vibrant team of friends specializing in cutting-edge web development. Consisting of Project Manager,
               Web Designer, Developer, and 3D Designer, we provide services for developing and tailoring websites
               according to our client`s criteria. To make our clients stand out amidst their competitors, we also

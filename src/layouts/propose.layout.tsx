@@ -1,5 +1,57 @@
 import {FullWidthContainer} from "../components/fullScreenContainer";
 
+const proposeItems = {
+  line1: [
+    {
+      title: "Full cycle Development website",
+      image: "",
+      description: "",
+    },
+    {
+      title: "Front end",
+      image: "",
+      description: "",
+    },
+    {
+      title: "Back end",
+      image: "",
+      description: "",
+    },
+    {
+      title: "3D Design / Modelling",
+      image: "",
+      description: "",
+    },
+  ],
+  line2: [
+    {
+      title: "Ui / Ux",
+      image: "",
+      description: "",
+    },
+    {
+      title: "Web Design",
+      image: "",
+      description: "",
+    },
+    {
+      title: "Graphic Design",
+      image: "",
+      description: "",
+    },
+    {
+      title: "Create Brand Book",
+      image: "",
+      description: "",
+    },
+    {
+      title: "Create Landing pages",
+      image: "",
+      description: "",
+    },
+  ]
+}
+
 export const ProposeLayout = () => {
   return (
     <FullWidthContainer styles={""}>
@@ -27,9 +79,34 @@ export const ProposeLayout = () => {
             </div>
           </div>
           <div
-            className={"w-full h-full bg-rose-500/10 xl:mt-10 2xl:mt-14 flex justify-center items-center text-main_dark uppercase font-black"}
+            className={"w-full h-full xl:mt-10 2xl:mt-14"}
           >
-            Bottom part
+            <div className={"line-1 w-full h-1/2 flex justify-evenly items-center"}>
+              {proposeItems.line1.map(el => (
+                <div key={el.title} className={"buttonFrameWrapper"}>
+                  <div className={"buttonFrameWrapper-diagonal"}>
+                    <div className={"buttonFrameContainer"}>
+                      <div className={"buttonFrameContainer-diagonal capitalize py-3 px-6 text-lg text-main_dark font-light"}>
+                        {el.title}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div className={"line-2 w-full h-1/2 flex justify-around items-center"}>
+              {proposeItems.line2.map(el => (
+                <div key={el.title} className={"buttonFrameWrapper"}>
+                  <div className={"buttonFrameWrapper-diagonal"}>
+                    <div className={"buttonFrameContainer"}>
+                      <div className={"buttonFrameContainer-diagonal capitalize py-3 px-6 text-lg text-main_dark font-light"}>
+                        {el.title}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>

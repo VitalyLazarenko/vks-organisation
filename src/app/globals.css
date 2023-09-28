@@ -46,20 +46,6 @@ body {
   background: #FFF;
 }
 
-body::-webkit-scrollbar {
-     width: 5px;
- }
-body::-webkit-scrollbar-track {
-     box-shadow: inset 0 0 3px rgba(255, 255, 255, 1);
-     border-radius: 3px;
- }
-body::-webkit-scrollbar-thumb {
-     background-color: #00605D;
-     border-radius: 3px;
-     outline: 1px solid #00605D;
-     height: 20px;
- }
-
 .strokeText {
   font-family: 'VKS Sans', sans-serif;
   font-weight: bold;
@@ -78,9 +64,274 @@ body::-webkit-scrollbar-thumb {
   transition: all .45s ease;
 }
 
+
+.whiteFrameWrapper {
+    position: relative;
+}
+.whiteFrameWrapper::before {
+    content: "";
+    position: absolute;
+    top: -5%;
+    right: -10%;
+    width: 60%; /* Ширина бордера (половина ширини контейнера) */
+    height: 1px; /* Висота бордера */
+    background-color: #FFF; /* Колір бордера */
+}
+.whiteFrameWrapper::after{
+    content: "";
+    position: absolute;
+    top: -5%;
+    right: -10%;
+    width: 1px; /* Ширина бордера зверху */
+    height: 60%; /* Висота бордера зліва (половина висоти контейнера) */
+    background-color: #FFF; /* Колір бордера */
+}
+
+.whiteFrameWrapper-diagonal {
+    position: relative;
+}
+.whiteFrameWrapper-diagonal::before {
+    content: "";
+    position: absolute;
+    bottom: -10%;
+    left: -5%;
+    width: 60%; /* Ширина бордера (половина ширини контейнера) */
+    height: 1px; /* Висота бордера */
+    background-color: #FFF; /* Колір бордера */
+}
+.whiteFrameWrapper-diagonal::after{
+    content: "";
+    position: absolute;
+    bottom: -10%;
+    left: -5%;
+    width: 1px; /* Ширина бордера зверху */
+    height: 60%; /* Висота бордера зліва (половина висоти контейнера) */
+    background-color: #FFF; /* Колір бордера */
+}
+
+.whiteFrameContainer {
+    position: relative;
+}
+.whiteFrameContainer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 105%; /* Ширина бордера (половина ширини контейнера) */
+    height: 1px; /* Висота бордера */
+    background-color: #FFF; /* Колір бордера */
+}
+.whiteFrameContainer::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1px; /* Ширина бордера зверху */
+    height: 105%; /* Висота бордера зліва (половина висоти контейнера) */
+    background-color: #FFF; /* Колір бордера */
+}
+
+.whiteFrameContainer-diagonal {
+    position: relative;
+}
+.whiteFrameContainer-diagonal::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 95%; /* Ширина бордера (половина ширини контейнера) */
+    height: 1px; /* Висота бордера */
+    background-color: #FFF; /* Колір бордера */
+}
+.whiteFrameContainer-diagonal::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 1px; /* Ширина бордера зверху */
+    height: 95%; /* Висота бордера зліва (половина висоти контейнера) */
+    background-color: #FFF; /* Колір бордера */
+}
+
+.darkFrameWrapper {
+    position: relative;
+}
+.darkFrameWrapper::before {
+    content: "";
+    position: absolute;
+    top: -3%;
+    right: -4%;
+    width: 60%; /* Ширина бордера (половина ширини контейнера) */
+    height: 1px; /* Висота бордера */
+    background-color: #00B09B; /* Колір бордера */
+}
+.darkFrameWrapper::after{
+    content: "";
+    position: absolute;
+    top: -3%;
+    right: -4%;
+    width: 1px; /* Ширина бордера зверху */
+    height: 60%; /* Висота бордера зліва (половина висоти контейнера) */
+    background-color: #00B09B; /* Колір бордера */
+}
+
+.darkFrameWrapper-diagonal {
+    position: relative;
+}
+.darkFrameWrapper-diagonal::before {
+    content: "";
+    position: absolute;
+    bottom: -5%;
+    left: -3%;
+    width: 60%; /* Ширина бордера (половина ширини контейнера) */
+    height: 1px; /* Висота бордера */
+    background-color: #00B09B; /* Колір бордера */
+}
+.darkFrameWrapper-diagonal::after{
+    content: "";
+    position: absolute;
+    bottom: -5%;
+    left: -3%;
+    width: 1px; /* Ширина бордера зверху */
+    height: 60%; /* Висота бордера зліва (половина висоти контейнера) */
+    background-color: #00B09B; /* Колір бордера */
+}
+
+.darkFrameContainer {
+    position: relative;
+}
+.darkFrameContainer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 102%; /* Ширина бордера (половина ширини контейнера) */
+    height: 1px; /* Висота бордера */
+    background-color: #00B09B; /* Колір бордера */
+}
+.darkFrameContainer::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1px; /* Ширина бордера зверху */
+    height: 102%; /* Висота бордера зліва (половина висоти контейнера) */
+    background-color: #00B09B; /* Колір бордера */
+}
+
+.darkFrameContainer-diagonal {
+    position: relative;
+}
+.darkFrameContainer-diagonal::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 98%; /* Ширина бордера (половина ширини контейнера) */
+    height: 1px; /* Висота бордера */
+    background-color: #00B09B; /* Колір бордера */
+}
+.darkFrameContainer-diagonal::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 1px; /* Ширина бордера зверху */
+    height: 98%; /* Висота бордера зліва (половина висоти контейнера) */
+    background-color: #00B09B; /* Колір бордера */
+}
+
+.buttonFrameWrapper {
+    position: relative;
+}
+.buttonFrameWrapper::before {
+    content: "";
+    position: absolute;
+    top: -15%;
+    right: -10%;
+    width: 60%; /* Ширина бордера (половина ширини контейнера) */
+    height: 1px; /* Висота бордера */
+    background-color: #00B09B; /* Колір бордера */
+}
+.buttonFrameWrapper::after{
+    content: "";
+    position: absolute;
+    top: -15%;
+    right: -10%;
+    width: 1px; /* Ширина бордера зверху */
+    height: 70%; /* Висота бордера зліва (половина висоти контейнера) */
+    background-color: #00B09B; /* Колір бордера */
+}
+
+.buttonFrameWrapper-diagonal {
+    position: relative;
+}
+.buttonFrameWrapper-diagonal::before {
+    content: "";
+    position: absolute;
+    bottom: -20%;
+    left: -5%;
+    width: 60%; /* Ширина бордера (половина ширини контейнера) */
+    height: 1px; /* Висота бордера */
+    background-color: #00B09B; /* Колір бордера */
+}
+.buttonFrameWrapper-diagonal::after{
+    content: "";
+    position: absolute;
+    bottom: -20%;
+    left: -5%;
+    width: 1px; /* Ширина бордера зверху */
+    height: 70%; /* Висота бордера зліва (половина висоти контейнера) */
+    background-color: #00B09B; /* Колір бордера */
+}
+
+.buttonFrameContainer {
+    position: relative;
+}
+.buttonFrameContainer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 105%; /* Ширина бордера (половина ширини контейнера) */
+    height: 1px; /* Висота бордера */
+    background-color: #00B09B; /* Колір бордера */
+}
+.buttonFrameContainer::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1px; /* Ширина бордера зверху */
+    height: 110%; /* Висота бордера зліва (половина висоти контейнера) */
+    background-color: #00B09B; /* Колір бордера */
+}
+
+.buttonFrameContainer-diagonal {
+    position: relative;
+}
+.buttonFrameContainer-diagonal::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 95%; /* Ширина бордера (половина ширини контейнера) */
+    height: 1px; /* Висота бордера */
+    background-color: #00B09B; /* Колір бордера */
+}
+.buttonFrameContainer-diagonal::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 1px; /* Ширина бордера зверху */
+    height: 85%; /* Висота бордера зліва (половина висоти контейнера) */
+    background-color: #00B09B; /* Колір бордера */
+}
+
+
 input[type="checkbox"]:checked  {
     background-color: transparent;
     border: 1px solid black;
     border-radius: 0;
 }
-
