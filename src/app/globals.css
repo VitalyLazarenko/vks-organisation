@@ -3,71 +3,88 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+    --foreground-rgb: 0, 0, 0;
+    --background-start-rgb: 214, 219, 220;
+    --background-end-rgb: 255, 255, 255;
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+    :root {
+        --foreground-rgb: 255, 255, 255;
+        --background-start-rgb: 0, 0, 0;
+        --background-end-rgb: 0, 0, 0;
+    }
 }
 
 
 /* nunito-sans.css */
 @font-face {
-  font-family: 'Nunito Sans';
-  font-style: normal;
-  font-weight: 400;
-  src: url('/fonts/nunito_sans/NunitoSans-Italic-VariableFont_YTLC,opsz,wdth,wght.ttf') format('truetype');
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/fonts/nunito_sans/NunitoSans-Italic-VariableFont_YTLC,opsz,wdth,wght.ttf') format('truetype');
 }
 
 @font-face {
-  font-family: 'Nunito Sans';
-  font-style: normal;
-  font-weight: 900;
-  src: url('/fonts/nunito_sans/NunitoSans-VariableFont_YTLC,opsz,wdth,wght.ttf') format('truetype');
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 900;
+    src: url('/fonts/nunito_sans/NunitoSans-VariableFont_YTLC,opsz,wdth,wght.ttf') format('truetype');
 }
 
 @font-face {
-  font-family: 'VKS Sans';
-  font-style: normal;
-  font-weight: bold;
-  src: url('/fonts/VksSans-Regular/VksSans-Regular.ttf') format('truetype');
+    font-family: 'VKS Sans';
+    font-style: normal;
+    font-weight: bold;
+    src: url('/fonts/VksSans-Regular/VksSans-Regular.ttf') format('truetype');
 }
 
 body {
-  font-family: 'Nunito Sans', sans-serif;
-  color: rgb(var(--foreground-rgb));
-  overflow-x: hidden;
-  background: #FFF;
+    font-family: 'Nunito Sans', sans-serif;
+    color: rgb(var(--foreground-rgb));
+    overflow-x: hidden;
+    background: #FFF;
+}
+
+body::-webkit-scrollbar {
+    width: 5px;
+}
+
+body::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+    border-radius: 3px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #00605D;
+    border-radius: 3px;
+    outline: 1px solid #ced4d9;
+    height: 20px;
 }
 
 .strokeText {
-  font-family: 'VKS Sans', sans-serif;
-  font-weight: bold;
-  color: #00605D; /* We make the text transparent */
-  /*text-stroke: 2px #000; !* Text stroke for other browsers *!*/
+    font-family: 'VKS Sans', sans-serif;
+    font-weight: bold;
+    color: #00605D; /* We make the text transparent */
+    /*text-stroke: 2px #000; !* Text stroke for other browsers *!*/
 }
 
 .strokeTextWhite {
-  font-family: 'VKS Sans', sans-serif;
-  font-weight: bold;
-  color: #FFF; /* Text stroke for Chrome and Safari */
-  /*text-stroke: 2px #000; !* Text stroke for other browsers *!*/
+    font-family: 'VKS Sans', sans-serif;
+    font-weight: bold;
+    color: #FFF; /* Text stroke for Chrome and Safari */
+    /*text-stroke: 2px #000; !* Text stroke for other browsers *!*/
 }
 
 .transitionClass {
-  transition: all .45s ease;
+    transition: all .45s ease;
 }
 
 
 .whiteFrameWrapper {
     position: relative;
 }
+
 .whiteFrameWrapper::before {
     content: "";
     position: absolute;
@@ -77,7 +94,8 @@ body {
     height: 1px; /* Висота бордера */
     background-color: #FFF; /* Колір бордера */
 }
-.whiteFrameWrapper::after{
+
+.whiteFrameWrapper::after {
     content: "";
     position: absolute;
     top: -5%;
@@ -90,6 +108,7 @@ body {
 .whiteFrameWrapper-diagonal {
     position: relative;
 }
+
 .whiteFrameWrapper-diagonal::before {
     content: "";
     position: absolute;
@@ -99,7 +118,8 @@ body {
     height: 1px; /* Висота бордера */
     background-color: #FFF; /* Колір бордера */
 }
-.whiteFrameWrapper-diagonal::after{
+
+.whiteFrameWrapper-diagonal::after {
     content: "";
     position: absolute;
     bottom: -10%;
@@ -112,6 +132,7 @@ body {
 .whiteFrameContainer {
     position: relative;
 }
+
 .whiteFrameContainer::before {
     content: "";
     position: absolute;
@@ -121,7 +142,8 @@ body {
     height: 1px; /* Висота бордера */
     background-color: #FFF; /* Колір бордера */
 }
-.whiteFrameContainer::after{
+
+.whiteFrameContainer::after {
     content: "";
     position: absolute;
     top: 0;
@@ -134,6 +156,7 @@ body {
 .whiteFrameContainer-diagonal {
     position: relative;
 }
+
 .whiteFrameContainer-diagonal::before {
     content: "";
     position: absolute;
@@ -143,7 +166,8 @@ body {
     height: 1px; /* Висота бордера */
     background-color: #FFF; /* Колір бордера */
 }
-.whiteFrameContainer-diagonal::after{
+
+.whiteFrameContainer-diagonal::after {
     content: "";
     position: absolute;
     bottom: 0;
@@ -156,6 +180,7 @@ body {
 .darkFrameWrapper {
     position: relative;
 }
+
 .darkFrameWrapper::before {
     content: "";
     position: absolute;
@@ -165,7 +190,8 @@ body {
     height: 1px; /* Висота бордера */
     background-color: #00B09B; /* Колір бордера */
 }
-.darkFrameWrapper::after{
+
+.darkFrameWrapper::after {
     content: "";
     position: absolute;
     top: -3%;
@@ -178,6 +204,7 @@ body {
 .darkFrameWrapper-diagonal {
     position: relative;
 }
+
 .darkFrameWrapper-diagonal::before {
     content: "";
     position: absolute;
@@ -187,7 +214,8 @@ body {
     height: 1px; /* Висота бордера */
     background-color: #00B09B; /* Колір бордера */
 }
-.darkFrameWrapper-diagonal::after{
+
+.darkFrameWrapper-diagonal::after {
     content: "";
     position: absolute;
     bottom: -5%;
@@ -200,6 +228,7 @@ body {
 .darkFrameContainer {
     position: relative;
 }
+
 .darkFrameContainer::before {
     content: "";
     position: absolute;
@@ -209,7 +238,8 @@ body {
     height: 1px; /* Висота бордера */
     background-color: #00B09B; /* Колір бордера */
 }
-.darkFrameContainer::after{
+
+.darkFrameContainer::after {
     content: "";
     position: absolute;
     top: 0;
@@ -222,6 +252,7 @@ body {
 .darkFrameContainer-diagonal {
     position: relative;
 }
+
 .darkFrameContainer-diagonal::before {
     content: "";
     position: absolute;
@@ -231,7 +262,8 @@ body {
     height: 1px; /* Висота бордера */
     background-color: #00B09B; /* Колір бордера */
 }
-.darkFrameContainer-diagonal::after{
+
+.darkFrameContainer-diagonal::after {
     content: "";
     position: absolute;
     bottom: 0;
@@ -244,6 +276,7 @@ body {
 .buttonFrameWrapper {
     position: relative;
 }
+
 .buttonFrameWrapper::before {
     content: "";
     position: absolute;
@@ -253,7 +286,8 @@ body {
     height: 1px; /* Висота бордера */
     background-color: #00B09B; /* Колір бордера */
 }
-.buttonFrameWrapper::after{
+
+.buttonFrameWrapper::after {
     content: "";
     position: absolute;
     top: -15%;
@@ -266,6 +300,7 @@ body {
 .buttonFrameWrapper-diagonal {
     position: relative;
 }
+
 .buttonFrameWrapper-diagonal::before {
     content: "";
     position: absolute;
@@ -275,7 +310,8 @@ body {
     height: 1px; /* Висота бордера */
     background-color: #00B09B; /* Колір бордера */
 }
-.buttonFrameWrapper-diagonal::after{
+
+.buttonFrameWrapper-diagonal::after {
     content: "";
     position: absolute;
     bottom: -20%;
@@ -288,6 +324,7 @@ body {
 .buttonFrameContainer {
     position: relative;
 }
+
 .buttonFrameContainer::before {
     content: "";
     position: absolute;
@@ -297,7 +334,8 @@ body {
     height: 1px; /* Висота бордера */
     background-color: #00B09B; /* Колір бордера */
 }
-.buttonFrameContainer::after{
+
+.buttonFrameContainer::after {
     content: "";
     position: absolute;
     top: 0;
@@ -310,6 +348,7 @@ body {
 .buttonFrameContainer-diagonal {
     position: relative;
 }
+
 .buttonFrameContainer-diagonal::before {
     content: "";
     position: absolute;
@@ -319,7 +358,8 @@ body {
     height: 1px; /* Висота бордера */
     background-color: #00B09B; /* Колір бордера */
 }
-.buttonFrameContainer-diagonal::after{
+
+.buttonFrameContainer-diagonal::after {
     content: "";
     position: absolute;
     bottom: 0;
@@ -330,7 +370,7 @@ body {
 }
 
 
-input[type="checkbox"]:checked  {
+input[type="checkbox"]:checked {
     background-color: transparent;
     border: 1px solid black;
     border-radius: 0;

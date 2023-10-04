@@ -56,7 +56,7 @@ export const ProposeLayout = () => {
   return (
     <FullWidthContainer styles={""}>
       <div className={"h-screen w-full bg-img_propose bg-cover bg-top xl:px-36 2xl:px-44 flex justify-center items-center"}>
-        <div className={"w-full h-screen xl:pb-10 xl:pt-16 2xl:pt-20 2xl:pb-12 flex flex-col"}>
+        <div className={"w-full h-screen xl:pb-10 xl:pt-20 2xl:pt-24 2xl:pb-12 flex flex-col"}>
           <div className={"flex justify-end mt-3"}>
             <div className={"w-7/12 flex flex-col justify-start items-start"}>
               <h2 className={"font-black uppercase xl:text-3xl 2xl:text-4xl strokeText"}>What we propose</h2>
@@ -86,7 +86,7 @@ export const ProposeLayout = () => {
                 <div key={el.title} className={"buttonFrameWrapper"}>
                   <div className={"buttonFrameWrapper-diagonal"}>
                     <div className={"buttonFrameContainer"}>
-                      <div className={"buttonFrameContainer-diagonal capitalize py-3 px-6 text-lg text-main_dark font-light"}>
+                      <div className={"buttonFrameContainer-diagonal bg-white bg-opacity-30 capitalize py-3 px-6 text-lg text-main_dark font-light"}>
                         {el.title}
                       </div>
                     </div>
@@ -99,7 +99,7 @@ export const ProposeLayout = () => {
                 <div key={el.title} className={"buttonFrameWrapper"}>
                   <div className={"buttonFrameWrapper-diagonal"}>
                     <div className={"buttonFrameContainer"}>
-                      <div className={"buttonFrameContainer-diagonal capitalize py-3 px-6 text-lg text-main_dark font-light"}>
+                      <div className={"buttonFrameContainer-diagonal bg-white bg-opacity-30 capitalize py-3 px-6 text-lg text-main_dark font-light"}>
                         {el.title}
                       </div>
                     </div>
