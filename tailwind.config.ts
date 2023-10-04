@@ -29,6 +29,15 @@ const config: Config = {
         line_light: '#99DFD7',
       }
     },
+    screens: {
+      'mobileM': '375px',
+      'mobileL': '480px',
+      'sm':'640px',
+      'md':'768px',
+      'lg':'1024px',
+      'xl':'1280px',
+      '2xl':'1536px',
+    },
   },
   plugins: [],
 }
