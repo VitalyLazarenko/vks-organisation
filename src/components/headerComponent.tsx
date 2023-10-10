@@ -13,6 +13,7 @@ export const HeaderComponent: FC<IHeaderProps> = ({isShowFullHeader}) => {
   useEffect(() => {
     if (navigatorRef && navigatorRef.current && logoRef && logoRef.current) {
       if (isShowFullHeader) {
+        logoRef.current.classList.remove('lg:left-20');
         logoRef.current.classList.remove('xl:left-36');
         logoRef.current.classList.remove('2xl:left-44');
         logoRef.current.classList.add('left-1/2');
@@ -22,6 +23,7 @@ export const HeaderComponent: FC<IHeaderProps> = ({isShowFullHeader}) => {
       } else {
         logoRef.current.classList.remove('left-1/2');
         logoRef.current.classList.remove('-translate-x-1/2');
+        logoRef.current.classList.add('lg:left-20');
         logoRef.current.classList.add('xl:left-36');
         logoRef.current.classList.add('2xl:left-44');
         navigatorRef.current.classList.remove('opacity-0');
@@ -31,7 +33,7 @@ export const HeaderComponent: FC<IHeaderProps> = ({isShowFullHeader}) => {
   }, [isShowFullHeader, logoRef, navigatorRef])
 
   return (
-    <div className={"w-full h-28 xl:px-36 2xl:px-44 fixed flex justify-end items-center z-10"}>
+    <div className={"w-full h-28 lg:px-20 xl:px-36 2xl:px-44 fixed left-0 top-0 flex justify-end items-center z-10"}>
       <img
         ref={logoRef}
         className={"cursor-pointer absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transitionClass hover:scale-105"}

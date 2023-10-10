@@ -72,7 +72,7 @@ body::-webkit-scrollbar-thumb {
 .strokeTextWhite {
     font-family: 'VKS Sans', sans-serif;
     font-weight: bold;
-    color: #FFF; /* Text stroke for Chrome and Safari */
+    color: #FFFFFF; /* Text stroke for Chrome and Safari */
     /*text-stroke: 2px #000; !* Text stroke for other browsers *!*/
 }
 

@@ -13,7 +13,14 @@ interface ISkillsTickers {
   line2: ISkillItem[],
 }
 
-const skillTickers = {
+interface IUser {
+  name: string,
+  avatar: string,
+  position: string,
+
+}
+
+const skillTickers: ISkillsTickers = {
   line1: [
     {
       text: "Full cycle Development website",
@@ -92,6 +99,24 @@ const skillTickers = {
   ]
 }
 
+const users: IUser[] = [
+  {
+    name: "Vitalii Lazarenko",
+    avatar: "/assets/about%20us/avatar_1.jpg",
+    position: "Head of the development department"
+  },
+  {
+    name: "Kayte",
+    avatar: "/assets/about%20us/avatar_2.jpg",
+    position: "Head of the manager department"
+  },
+  {
+    name: "Sofiia Tonkonog",
+    avatar: "/assets/about%20us/avatar_3.jpg",
+    position: "Head of the creative and Design department"
+  }
+]
+
 export const AboutLayout = () => {
   const GetSkillsItem = (iterator: number) => {
     const selectedSkill = skillTickers.line1[iterator]
@@ -107,12 +132,12 @@ export const AboutLayout = () => {
         {
           selectedSkill.isOutlined ?
             <div
-              className="flex justify-center items-center text-cente p-2.5 font-black uppercase xl:text-2xl 2xl:text-3xl strokeTextWhite">
+              className="flex justify-center items-center text-cente p-2.5 font-black uppercase lg:text-3xl xl:text-2xl 2xl:text-3xl strokeTextWhite">
               {selectedSkill.text}
             </div>
             :
             <div
-              className="flex justify-center items-center ext-cente p-2.5 font-black uppercase xl:text-2xl 2xl:text-3xl">
+              className="flex justify-center items-center ext-cente p-2.5 font-black uppercase lg:text-3xl xl:text-2xl 2xl:text-3xl text-white">
               {selectedSkill.text}
             </div>
         }
@@ -123,52 +148,29 @@ export const AboutLayout = () => {
   return (
     <FullWidthContainer styles={""}>
       <div className={"h-screen w-full bg-img_about bg-cover bg-top flex flex-col justify-between"}>
-        <div className={"xl:px-36 2xl:px-44 flex flex-col justify-center items-center"}>
+        <div className={"lg:px-20 xl:px-36 2xl:px-44 flex flex-col justify-center items-center"}>
           <div className={"w-full h-full flex flex-col justify-start items-center"}>
-            <h2 className={"2xl:mt-24 xl:mt-20 font-black uppercase xl:text-3xl 2xl:text-4xl strokeTextWhite"}>About
+            <h2 className={"lg:mt-24 xl:mt-20 2xl:mt-24 font-black uppercase lg:text-3xl xl:text-3xl 2xl:text-4xl strokeTextWhite"}>About
               Us</h2>
-            <div className={"w-full h-52 mt-12 mb-10 xl:px-24 flex justify-evenly items-center"}>
-              <div className={"whiteFrameWrapper h-full xl:w-48 2xl:w-52"}>
-                <div className={"whiteFrameWrapper-diagonal h-fit xl:w-48 2xl:w-52"}>
-                  <div className={"whiteFrameContainer h-fit xl:w-48 2xl:w-52"}>
-                    <div className={"whiteFrameContainer-diagonal w-full h-full 2xl:p-4 xl:p-3 uppercase flex justify-center items-center"}>
-                      <img
-                        src="/assets/about%20us/avatar_1.jpg"
-                        alt="avatar_1"
-                        className={"w-full h-auto"}
-                      />
+            <div className={"w-full h-52 mt-12 lg:mb-0 xl:mb-10 2xl:mb-10 lg:px-20 xl:px-24 2xl:px-24 flex justify-evenly items-center"}>
+              {users.map((user) => (
+                <div key={user.name} className={"whiteFrameWrapper h-full lg:w-36 xl:w-48 2xl:w-52"}>
+                  <div className={"whiteFrameWrapper-diagonal h-fit lg:w-36 xl:w-48 2xl:w-52"}>
+                    <div className={"whiteFrameContainer h-fit lg:w-36 xl:w-48 2xl:w-52"}>
+                      <div
+                        className={"whiteFrameContainer-diagonal w-full h-full lg:p-2 xl:p-3 2xl:p-4 uppercase flex justify-center items-center"}>
+                        <img
+                          src={user.avatar}
+                          alt="avatar_1"
+                          className={"w-full h-auto"}
+                        />
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div className={"whiteFrameWrapper h-full xl:w-48 2xl:w-52"}>
-                <div className={"whiteFrameWrapper-diagonal h-fit xl:w-48 2xl:w-52"}>
-                  <div className={"whiteFrameContainer h-fit xl:w-48 2xl:w-52"}>
-                    <div className={"whiteFrameContainer-diagonal w-full h-full 2xl:p-4 xl:p-3 uppercase flex justify-center items-center"}>
-                      <img
-                        src="/assets/about%20us/avatar_2.jpg"
-                        alt="avatar_1"
-                        className={"w-full h-auto"}
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className={"whiteFrameWrapper h-full xl:w-48 2xl:w-52"}>
-                <div className={"whiteFrameWrapper-diagonal h-fit xl:w-48 2xl:w-52"}>
-                  <div className={"whiteFrameContainer h-fit xl:w-48 2xl:w-52"}>
-                    <div className={"whiteFrameContainer-diagonal w-full h-full 2xl:p-4 xl:p-3 uppercase flex justify-center items-center"}>
-                      <img
-                        src="/assets/about%20us/avatar_3.jpg"
-                        alt="avatar_1"
-                        className={"w-full h-auto"}
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
+              ))}
             </div>
-            <div className={"w-full xl:text-lg 2xl:text-2xl 2xl:mt-6 xl:mt-3 text-white font-light flex justify-evenly items-center text-center"}>
+            <div className={"w-full lg:text-lg lg:mt-0 xl:text-lg xl:mt-2 2xl:text-2xl 2xl:mt-6 text-white font-light flex justify-evenly items-center text-center"}>
               A vibrant team of friends specializing in cutting-edge web development. Consisting of Project Manager,
               Web Designer, Developer, and 3D Designer, we provide services for developing and tailoring websites
               according to our client`s criteria. To make our clients stand out amidst their competitors, we also
