@@ -63,11 +63,11 @@ export const ProposeLayout = () => {
 
               <p className={"lg:text-base xl:text-base 2xl:text-2xl text-main_dark font-normal lg:mt-10 xl:mt-10 2xl:mt-16 lg:my-8 xl:my-8 2xl:my-8"}>
                 Meet our dynamic team of friends, experts in cutting-edge web development. With our Project Manager,
-                Web Designer, Developer, and 3D Designer, we deliver tailored websites that precisely match our client's needs.
+                Web Designer, Developer, and 3D Designer, we deliver tailored websites that precisely match our client&apos;s needs.
                 <br/>
                 <br/>
-                But here's the twist – we go beyond the ordinary. We weave 3D technology into the mix, using it to
-                magnify the distinctive features of every client's website. We're a crew that thrives on creativity,
+                But here&apos;s the twist – we go beyond the ordinary. We weave 3D technology into the mix, using it to
+                magnify the distinctive features of every client&apos;s website. We&apos;re a crew that thrives on creativity,
                 camaraderie, and a modern outlook, constantly embracing new challenges. Join us on an exploration of
                 the digital universe!
               </p>
