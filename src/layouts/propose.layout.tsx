@@ -61,25 +61,20 @@ export const ProposeLayout = () => {
             <div className={"w-7/12 flex flex-col justify-start items-start"}>
               <h2 className={"font-black uppercase lg:text-3xl xl:text-3xl 2xl:text-4xl strokeText"}>What we propose</h2>
 
-              <p className={"lg:text-base xl:text-lg 2xl:text-2xl text-main_dark font-normal lg:mt-10 xl:mt-12 2xl:mt-16 lg:my-8 xl:my-8 2xl:my-8"}>
-                A vibrant team of friends specializing in cutting-edge web development. Consisting of Project Manager.
+              <p className={"lg:text-base xl:text-base 2xl:text-2xl text-main_dark font-normal lg:mt-10 xl:mt-10 2xl:mt-16 lg:my-8 xl:my-8 2xl:my-8"}>
+                Meet our dynamic team of friends, experts in cutting-edge web development. With our Project Manager,
+                Web Designer, Developer, and 3D Designer, we deliver tailored websites that precisely match our client's needs.
+                <br/>
+                <br/>
+                But here's the twist – we go beyond the ordinary. We weave 3D technology into the mix, using it to
+                magnify the distinctive features of every client's website. We're a crew that thrives on creativity,
+                camaraderie, and a modern outlook, constantly embracing new challenges. Join us on an exploration of
+                the digital universe!
               </p>
-
-              <div>
-                <p className={"lg:text-base xl:text-lg 2xl:text-2xl text-main_dark font-normal"}>- Web Designer, Developer, and</p>
-                <p className={"lg:text-base xl:text-lg 2xl:text-2xl text-main_dark font-normal"}>- 3D Designer, we provide
-                  services</p>
-                <p className={"lg:text-base xl:text-lg 2xl:text-2xl text-main_dark font-normal"}>- for developing and tailoring
-                  websites</p>
-                <p className={"lg:text-base xl:text-lg 2xl:text-2xl text-main_dark font-normal"}>- according to our client`s criteria.
-                  To make</p>
-                <p className={"lg:text-base xl:text-lg 2xl:text-2xl text-main_dark font-normal"}>- our clients stand out amidst their
-                  competitors,</p>
-              </div>
             </div>
           </div>
           <div
-            className={"w-full h-full lg:mt-10 xl:mt-10 2xl:mt-14 flex flex-col justify-evenly items-center"}
+            className={"w-full h-full lg:mt-10 xl:mt-6 2xl:mt-14 flex flex-col justify-evenly items-center"}
           >
             <div className={"line-1 w-full h-auto flex justify-evenly items-center"}>
               {proposeItems.line1.map(el => (
