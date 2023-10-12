@@ -50,7 +50,11 @@ export const ChooseLayout = () => {
 
   return (
     <FullWidthContainer styles={""}>
-      <div id={"choose"} ref={container} className={"h-screen w-full bg-img_choose bg-cover bg-top lg:px-20 xl:px-36 2xl:px-44 flex justify-center items-center"}>
+      <div
+        id={"choose"}
+        ref={container}
+        className={"h-screen w-full bg-img_choose bg-cover bg-top lg:px-20 xl:px-36 2xl:px-44 flex justify-center items-center"}
+      >
         <div className={"w-full h-full flex flex-col justify-center items-center"}>
           <h2 className={"lg:mt-24 xl:mt-20 2xl:mt-24 font-black uppercase lg:text-3xl xl:text-3xl 2xl:text-4xl strokeTextWhite"}>Why choose us</h2>
           <div className={"w-full h-full py-14"}>

@@ -8,7 +8,7 @@ interface IProps {
 export const FullWidthContainer: FC<IProps> = ({children, styles = ''}) => {
   return (
       <div
-        className={"h-screen w-full " + styles}
+        className={"h-screen w-screen " + styles}
       >
         {children}
       </div>

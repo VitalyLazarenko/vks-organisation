@@ -51,7 +51,11 @@ export const ContactLayout = () => {
 
   return (
     <FullWidthContainer styles={""}>
-      <div id={"contact"} ref={container} className={"h-screen w-full bg-img_contact bg-cover bg-top relative"}>
+      <div
+        id={"contact"}
+        ref={container}
+        className={"h-screen w-full bg-img_contact bg-cover bg-top relative"}
+      >
         <div className={"w-full h-full lg:px-20 xl:px-36 2xl:px-44"}>
           <div className={"lg:w-7/12 xl:w-1/2 2xl:w-5/12 h-full flex flex-col items-center"}>
             <h2 className={"lg:mt-24 xl:mt-24 2xl:mt-24 lg:mb-12 xl:mb-8 2xl:mb-14 font-black uppercase lg:text-3xl xl:text-3xl 2xl:text-4xl strokeText"}>Contact

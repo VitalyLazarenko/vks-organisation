@@ -9,12 +9,10 @@ interface ISkillItem {
   text: string,
   isOutlined: boolean,
 }
-
 interface ISkillsTickers {
-  line1: ISkillItem[],
-  line2: ISkillItem[],
-}
+  [key: string]: ISkillItem[],
 
+}
 interface IUser {
   name: string,
   avatar: string,
@@ -23,21 +21,21 @@ interface IUser {
 }
 
 const skillTickers: ISkillsTickers = {
-  line1: [
+  "line1": [
     {
-      text: "Full cycle Development website",
+      text: "3D Design",
       isOutlined: true,
     },
     {
-      text: "front end",
+      text: "Figma",
       isOutlined: false,
     },
     {
-      text: "Back End",
+      text: "Illustrator",
       isOutlined: true,
     },
     {
-      text: "3D Design / Modelling",
+      text: "React.js",
       isOutlined: false,
     },
     {
@@ -53,29 +51,73 @@ const skillTickers: ISkillsTickers = {
       isOutlined: true,
     },
     {
-      text: "Create Brand Book",
+      text: "Photoshop",
       isOutlined: false,
     },
     {
-      text: "Create Landing pages",
+      text: "Three.js",
       isOutlined: true,
+    },
+    {
+      text: "Fabric",
+      isOutlined: false,
+    },
+    {
+      text: "Vue",
+      isOutlined: true,
+    },
+    {
+      text: "AR / VR",
+      isOutlined: false,
+    },
+    {
+      text: "Fiber",
+      isOutlined: true,
+    },
+    {
+      text: "WebGl",
+      isOutlined: false,
+    },
+    {
+      text: "Material UI",
+      isOutlined: true,
+    },
+    {
+      text: "Landing Page",
+      isOutlined: false,
+    },
+    {
+      text: "Plotly",
+      isOutlined: true,
+    },
+    {
+      text: "Branding Design",
+      isOutlined: false,
+    },
+    {
+      text: "QA Testing",
+      isOutlined: true,
+    },
+    {
+      text: "Blender",
+      isOutlined: false,
     },
   ],
-  line2: [
+  "line2": [
     {
-      text: "Full cycle Development website",
+      text: "3D Design",
       isOutlined: false,
     },
     {
-      text: "front end",
+      text: "Figma",
       isOutlined: true,
     },
     {
-      text: "Back End",
+      text: "Illustrator",
       isOutlined: false,
     },
     {
-      text: "3D Design / Modelling",
+      text: "React.js",
       isOutlined: true,
     },
     {
@@ -91,12 +133,56 @@ const skillTickers: ISkillsTickers = {
       isOutlined: false,
     },
     {
-      text: "Create Brand Book",
+      text: "Photoshop",
       isOutlined: true,
     },
     {
-      text: "Create Landing pages",
+      text: "Three.js",
       isOutlined: false,
+    },
+    {
+      text: "Fabric",
+      isOutlined: true,
+    },
+    {
+      text: "Vue",
+      isOutlined: false,
+    },
+    {
+      text: "AR / VR",
+      isOutlined: true,
+    },
+    {
+      text: "Fiber",
+      isOutlined: false,
+    },
+    {
+      text: "WebGl",
+      isOutlined: true,
+    },
+    {
+      text: "Material UI",
+      isOutlined: false,
+    },
+    {
+      text: "Landing Page",
+      isOutlined: true,
+    },
+    {
+      text: "Plotly",
+      isOutlined: false,
+    },
+    {
+      text: "Branding Design",
+      isOutlined: true,
+    },
+    {
+      text: "QA Testing",
+      isOutlined: false,
+    },
+    {
+      text: "Blender",
+      isOutlined: true,
     },
   ]
 }
@@ -124,8 +210,15 @@ export const AboutLayout = () => {
   const [isShow, setIsShow] = useState(false)
   const toggleChangeHeaderColor = useStore((state) => state.toggleChangeHeaderColor)
 
-  const GetSkillsItem = (iterator: number) => {
-    const selectedSkill = skillTickers.line1[iterator]
+  const GetSkillsItem = (iterator: number, line: string = "line1") => {
+    const currentLine = skillTickers[line]
+
+    console.log('currentLine',currentLine);
+
+    const selectedSkill = currentLine[iterator]
+
+    console.log('selectedSkill', selectedSkill);
+
     return (
       <div className="flex justify-between items-center">
         <div className="w-[1px] h-5 bg-line_normal mr-1"/>
@@ -186,7 +279,11 @@ export const AboutLayout = () => {
 
   return (
     <FullWidthContainer styles={""}>
-      <div id={"about"} ref={container} className={"h-screen w-full bg-img_about bg-cover bg-top flex flex-col justify-between"}>
+      <div
+        id={"about"}
+        ref={container}
+        className={"h-screen w-full bg-img_about bg-cover bg-top flex flex-col justify-between"}
+      >
         <div className={"lg:px-20 xl:px-36 2xl:px-44 flex flex-col justify-center items-center"}>
           <div className={"w-full h-full flex flex-col justify-start items-center"}>
             <h2 className={"lg:mt-24 xl:mt-20 2xl:mt-24 font-black uppercase lg:text-3xl xl:text-3xl 2xl:text-4xl strokeTextWhite"}>About
@@ -220,7 +317,7 @@ export const AboutLayout = () => {
             </div>
           </div>
         </div>
-        <div className={"w-full h-fit uppercase flex flex-col justify-center items-start"}>
+        <div className={"w-screen h-fit uppercase flex flex-col justify-center items-start"}>
           <div className={"w-full h-1/2"}>
             <div className={"w-full h-2.5 flex flex-col justify-between"}>
               <div className={"w-full h-[1px] bg-line_normal"}/>
@@ -228,12 +325,12 @@ export const AboutLayout = () => {
               <div className={"w-full h-[1px] bg-white"}/>
             </div>
             <Ticker
-              speed={2}
+              speed={3}
             >
               {
                 ({index}) => {
                   const iterator = (index + 1) % skillTickers.line1.length
-                  return GetSkillsItem(iterator)
+                  return GetSkillsItem(iterator, "line1")
                 }
               }
             </Ticker>
@@ -247,12 +344,12 @@ export const AboutLayout = () => {
             <Ticker
               direction={"toRight"}
               offset={"100%"}
-              speed={2}
+              speed={3}
             >
               {
                 ({index}) => {
-                  const iterator = (index + 1) % skillTickers.line1.length
-                  return GetSkillsItem(iterator)
+                  const iterator = (index + 1) % skillTickers.line2.length
+                  return GetSkillsItem(iterator, "line2")
                 }
               }
             </Ticker>
