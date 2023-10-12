@@ -1,9 +1,56 @@
+'use client';
 import {FullWidthContainer} from "../components/fullScreenContainer";
+import {useEffect, useRef, useState} from "react";
+import useStore from "../store/store";
 
 export const ChooseLayout = () => {
+  const container = useRef(null)
+  const [isShow, setIsShow] = useState(false)
+  const toggleChangeHeaderColor = useStore((state) => state.toggleChangeHeaderColor)
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            // Element is now visible on the screen
+            setIsShow(true)
+          } else {
+            // Element is no longer visible on the screen
+            setIsShow(false)
+          }
+        });
+      },
+      {
+        root: null, // Set the root element (default is viewport)
+        rootMargin: '0px', // Adjust the root margin as needed
+        threshold: 0.5, // Specify the intersection threshold (e.g., 0.5 for 50% visibility)
+      });
+
+    if (container.current) {
+      observer.observe(container.current);
+      setIsShow(false)
+    }
+
+    // Cleanup the observer when the component unmounts
+    return () => {
+      if (container.current) {
+        observer.unobserve(container.current);
+      }
+    };
+  }, []);
+  useEffect(() => {
+    if (container && container.current) {
+      if (isShow) {
+        toggleChangeHeaderColor(true)
+      } else {
+        toggleChangeHeaderColor(false)
+      }
+    }
+  }, [isShow, container])
+
   return (
     <FullWidthContainer styles={""}>
-      <div className={"h-screen w-full bg-img_choose bg-cover bg-top lg:px-20 xl:px-36 2xl:px-44 flex justify-center items-center"}>
+      <div id={"choose"} ref={container} className={"h-screen w-full bg-img_choose bg-cover bg-top lg:px-20 xl:px-36 2xl:px-44 flex justify-center items-center"}>
         <div className={"w-full h-full flex flex-col justify-center items-center"}>
           <h2 className={"lg:mt-24 xl:mt-20 2xl:mt-24 font-black uppercase lg:text-3xl xl:text-3xl 2xl:text-4xl strokeTextWhite"}>Why choose us</h2>
           <div className={"w-full h-full py-14"}>

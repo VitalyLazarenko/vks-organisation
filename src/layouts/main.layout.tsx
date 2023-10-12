@@ -2,11 +2,14 @@
 import {scrollToAnchor} from "../helpers/scroll.helpers";
 import React, {MutableRefObject, useEffect, useRef, useState} from "react";
 import {FullWidthContainer} from "../components/fullScreenContainer";
+import useStore from "../store/store";
 
 export const MainLayout = () => {
   const container = useRef(null)
   const navigator: MutableRefObject<HTMLDivElement | null> = useRef(null)
   const [isShow, setIsShow] = useState(false)
+  const toggleHeader = useStore((state) => state.toggleHeader)
+  const toggleChangeHeaderColor = useStore((state) => state.toggleChangeHeaderColor)
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
@@ -38,13 +41,16 @@ export const MainLayout = () => {
       }
     };
   }, []);
-
   useEffect(() => {
     if (navigator && navigator.current) {
       if (isShow) {
+        toggleHeader(true)
+        toggleChangeHeaderColor(false)
         navigator.current.classList.remove('opacity-0');
         navigator.current.classList.add('opacity-100');
       } else {
+        toggleHeader(false)
+        toggleChangeHeaderColor(false)
         navigator.current.classList.remove('opacity-100');
         navigator.current.classList.add('opacity-0');
       }
@@ -54,6 +60,7 @@ export const MainLayout = () => {
   return (
     <FullWidthContainer styles={""}>
       <div
+        id={"main"}
         ref={container}
         className={"h-screen w-full bg-img_main bg-cover bg-bottom lg:px-20 xl:px-36 2xl:px-44 flex justify-center items-center"}>
         <div className="h-full w-full flex">

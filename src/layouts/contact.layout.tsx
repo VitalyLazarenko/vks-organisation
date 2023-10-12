@@ -1,10 +1,57 @@
+'use client';
 import {FullWidthContainer} from "../components/fullScreenContainer";
 import {FooterComponent} from "../components/footerComponent";
+import {useEffect, useRef, useState} from "react";
 
 export const ContactLayout = () => {
+  const container = useRef(null)
+  const [isShow, setIsShow] = useState(false)
+
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            // Element is now visible on the screen
+            setIsShow(true)
+          } else {
+            // Element is no longer visible on the screen
+            setIsShow(false)
+          }
+        });
+      },
+      {
+        root: null, // Set the root element (default is viewport)
+        rootMargin: '0px', // Adjust the root margin as needed
+        threshold: 0.5, // Specify the intersection threshold (e.g., 0.5 for 50% visibility)
+      });
+
+    if (container.current) {
+      observer.observe(container.current);
+      setIsShow(false)
+    }
+
+    // Cleanup the observer when the component unmounts
+    return () => {
+      if (container.current) {
+        observer.unobserve(container.current);
+      }
+    };
+  }, []);
+  useEffect(() => {
+    if (container && container.current) {
+      if (isShow) {
+        // Show
+      } else {
+        // Hidden
+      }
+    }
+  }, [isShow, container])
+
+
   return (
     <FullWidthContainer styles={""}>
-      <div className={"h-screen w-full bg-img_contact bg-cover bg-top relative"}>
+      <div id={"contact"} ref={container} className={"h-screen w-full bg-img_contact bg-cover bg-top relative"}>
         <div className={"w-full h-full lg:px-20 xl:px-36 2xl:px-44"}>
           <div className={"lg:w-7/12 xl:w-1/2 2xl:w-5/12 h-full flex flex-col items-center"}>
             <h2 className={"lg:mt-24 xl:mt-24 2xl:mt-24 lg:mb-12 xl:mb-8 2xl:mb-14 font-black uppercase lg:text-3xl xl:text-3xl 2xl:text-4xl strokeText"}>Contact

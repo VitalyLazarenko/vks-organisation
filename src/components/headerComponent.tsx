@@ -1,12 +1,14 @@
 'use client';
 import {FC, MutableRefObject, useEffect, useRef} from "react";
 import {scrollToAnchor} from "../helpers/scroll.helpers";
+import useStore from "../store/store";
 
-interface IHeaderProps {
-  isShowFullHeader: boolean
-}
+interface IHeaderProps {}
 
-export const HeaderComponent: FC<IHeaderProps> = ({isShowFullHeader}) => {
+export const HeaderComponent: FC<IHeaderProps> = () => {
+  const isShowFullHeader = useStore((state) => state.showHeader)
+  const isChangedHeaderColor = useStore((state) => state.isChangedHeaderColor)
+
   const logoRef: MutableRefObject<HTMLImageElement | null> = useRef(null)
   const navigatorRef: MutableRefObject<HTMLDivElement | null> = useRef(null)
 
@@ -45,24 +47,28 @@ export const HeaderComponent: FC<IHeaderProps> = ({isShowFullHeader}) => {
         <div
           className={"cursor-pointer font-normal xl:text-base 2xl:text-xl text-main_dark mx-2.5 transitionClass hover:scale-105"}
           onClick={() => scrollToAnchor('#propose')}
+          style={isChangedHeaderColor ? {color: "white"} : {color: "#00605D"}}
         >
           Our propose
         </div>
         <div
           className={"cursor-pointer font-normal xl:text-base 2xl:text-xl text-main_dark mx-2.5 transitionClass hover:scale-105"}
           onClick={() => scrollToAnchor('#choose')}
+          style={isChangedHeaderColor ? {color: "white"} : {color: "#00605D"}}
         >
           Choose us
         </div>
         <div
           className={"cursor-pointer font-normal xl:text-base 2xl:text-xl text-main_dark mx-2.5 transitionClass hover:scale-105"}
           onClick={() => scrollToAnchor('#about')}
+          style={isChangedHeaderColor ? {color: "white"} : {color: "#00605D"}}
         >
           About us
         </div>
         <div
           className={"cursor-pointer font-normal xl:text-base 2xl:text-xl text-main_dark mx-2.5 transitionClass hover:scale-105"}
           onClick={() => scrollToAnchor('#contact')}
+          style={isChangedHeaderColor ? {color: "white"} : {color: "#00605D"}}
         >
           Contact us
         </div>

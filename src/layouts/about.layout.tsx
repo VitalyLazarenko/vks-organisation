@@ -2,6 +2,8 @@
 import {FullWidthContainer} from "../components/fullScreenContainer";
 import Ticker from "react-ticker";
 import {it} from "node:test";
+import {useEffect, useRef, useState} from "react";
+import useStore from "../store/store";
 
 interface ISkillItem {
   text: string,
@@ -118,6 +120,10 @@ const users: IUser[] = [
 ]
 
 export const AboutLayout = () => {
+  const container = useRef(null)
+  const [isShow, setIsShow] = useState(false)
+  const toggleChangeHeaderColor = useStore((state) => state.toggleChangeHeaderColor)
+
   const GetSkillsItem = (iterator: number) => {
     const selectedSkill = skillTickers.line1[iterator]
     return (
@@ -145,9 +151,42 @@ export const AboutLayout = () => {
     )
   }
 
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            // Element is now visible on the screen
+            setIsShow(true)
+            toggleChangeHeaderColor(true)
+          } else {
+            // Element is no longer visible on the screen
+            setIsShow(false)
+            toggleChangeHeaderColor(false)
+          }
+        });
+      },
+      {
+        root: null, // Set the root element (default is viewport)
+        rootMargin: '0px', // Adjust the root margin as needed
+        threshold: 0.5, // Specify the intersection threshold (e.g., 0.5 for 50% visibility)
+      });
+
+    if (container.current) {
+      observer.observe(container.current);
+    }
+
+    // Cleanup the observer when the component unmounts
+    return () => {
+      if (container.current) {
+        observer.unobserve(container.current);
+        toggleChangeHeaderColor(false)
+      }
+    };
+  }, []);
+
   return (
     <FullWidthContainer styles={""}>
-      <div className={"h-screen w-full bg-img_about bg-cover bg-top flex flex-col justify-between"}>
+      <div id={"about"} ref={container} className={"h-screen w-full bg-img_about bg-cover bg-top flex flex-col justify-between"}>
         <div className={"lg:px-20 xl:px-36 2xl:px-44 flex flex-col justify-center items-center"}>
           <div className={"w-full h-full flex flex-col justify-start items-center"}>
             <h2 className={"lg:mt-24 xl:mt-20 2xl:mt-24 font-black uppercase lg:text-3xl xl:text-3xl 2xl:text-4xl strokeTextWhite"}>About
