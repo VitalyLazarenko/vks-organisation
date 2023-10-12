@@ -55,7 +55,7 @@ export const MainLayout = () => {
     <FullWidthContainer styles={""}>
       <div
         ref={container}
-        className={"h-screen w-full bg-img_main_3 bg-cover bg-center lg:px-20 xl:px-36 2xl:px-44 flex justify-center items-center"}>
+        className={"h-screen w-full bg-img_main bg-cover bg-bottom lg:px-20 xl:px-36 2xl:px-44 flex justify-center items-center"}>
         <div className="h-full w-full flex">
           <div className="w-1/2 h-full flex justify-center items-center">
             <h1 className={"uppercase lg:text-4xl xl:text-5xl 2xl:text-6xl strokeText"}>

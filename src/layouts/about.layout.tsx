@@ -170,7 +170,7 @@ export const AboutLayout = () => {
                 </div>
               ))}
             </div>
-            <div className={"w-full lg:text-sm lg:mt-0 xl:text-base xl:mt-2 2xl:text-2xl 2xl:mt-6 text-white font-light flex justify-evenly items-center text-center"}>
+            <div className={"w-full lg:text-base lg:mt-0 xl:text-base xl:mt-2 2xl:text-xl 2xl:mt-6 text-white font-light flex justify-evenly items-center text-center"}>
               A vibrant team of friends specializing in cutting-edge web development. Consisting of Project Manager,
               Web Designer, Developer, and 3D Designer, we provide services for developing and tailoring websites
               according to our client&apos;s criteria.

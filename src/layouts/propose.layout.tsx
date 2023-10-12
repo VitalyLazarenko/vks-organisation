@@ -55,13 +55,16 @@ const proposeItems = {
 export const ProposeLayout = () => {
   return (
     <FullWidthContainer styles={""}>
-      <div className={"h-screen w-full bg-img_propose bg-cover bg-top lg:px-20 xl:px-36 2xl:px-44 flex justify-center items-center"}>
+      <div className={"h-screen w-full bg-img_propose bg-cover bg-left-top lg:px-20 xl:px-36 2xl:px-44 flex justify-center items-center"}>
         <div className={"w-full h-screen lg:pb-10 lg:pt-24 xl:pb-10 xl:pt-20 2xl:pt-24 2xl:pb-12 flex flex-col"}>
           <div className={"flex justify-end mt-3"}>
+            <div className={"w-5/12 h-min flex justify-center items-center"}>
+              <img className="w-auto lg:max-h-[330px] xl:max-h-[320px] 2xl:max-h-[400px] -rotate-12" src="/assets/propose/iPhone%2012%20Graphite%20Pro%20Top%20View%20Mockup.png" alt="iphone"/>
+            </div>
             <div className={"w-7/12 flex flex-col justify-start items-start"}>
               <h2 className={"font-black uppercase lg:text-3xl xl:text-3xl 2xl:text-4xl strokeText"}>What we propose</h2>
 
-              <p className={"lg:text-base xl:text-base 2xl:text-2xl text-main_dark font-normal lg:mt-10 xl:mt-10 2xl:mt-16 lg:my-8 xl:my-8 2xl:my-8"}>
+              <p className={"lg:text-base xl:text-base 2xl:text-xl text-main_dark font-normal lg:mt-10 xl:mt-10 2xl:mt-16 lg:my-8 xl:my-8 2xl:my-8"}>
                 Meet our dynamic team of friends, experts in cutting-edge web development. With our Project Manager,
                 Web Designer, Developer, and 3D Designer, we deliver tailored websites that precisely match our client&apos;s needs.
                 <br/>
@@ -74,14 +77,14 @@ export const ProposeLayout = () => {
             </div>
           </div>
           <div
-            className={"w-full h-full lg:mt-10 xl:mt-6 2xl:mt-14 flex flex-col justify-evenly items-center"}
+            className={"w-full h-full flex flex-col justify-evenly items-center"}
           >
             <div className={"line-1 w-full h-auto flex justify-evenly items-center"}>
               {proposeItems.line1.map(el => (
                 <div key={el.title} className={"buttonFrameWrapper"}>
                   <div className={"buttonFrameWrapper-diagonal"}>
                     <div className={"buttonFrameContainer"}>
-                      <div className={"buttonFrameContainer-diagonal bg-white bg-opacity-30 capitalize lg:py-3 lg:px-4 lg:text-sm xl:text-lg xl:py-3 xl:px-6 2xl:text-lg 2xl:py-3 2xl:px-6 text-main_dark font-light"}>
+                      <div className={"buttonFrameContainer-diagonal capitalize lg:py-3 lg:px-4 lg:text-sm xl:text-lg xl:py-3 xl:px-6 2xl:text-lg 2xl:py-3 2xl:px-6 text-main_dark font-light"}>
                         {el.title}
                       </div>
                     </div>
@@ -94,7 +97,7 @@ export const ProposeLayout = () => {
                 <div key={el.title} className={"buttonFrameWrapper"}>
                   <div className={"buttonFrameWrapper-diagonal"}>
                     <div className={"buttonFrameContainer"}>
-                      <div className={"buttonFrameContainer-diagonal bg-white bg-opacity-30 capitalize lg:py-3 lg:px-4 lg:text-sm xl:text-lg xl:py-3 xl:px-6 2xl:text-lg 2xl:py-3 2xl:px-6 text-main_dark font-light"}>
+                      <div className={"buttonFrameContainer-diagonal capitalize lg:py-3 lg:px-4 lg:text-sm xl:text-lg xl:py-3 xl:px-6 2xl:text-lg 2xl:py-3 2xl:px-6 text-main_dark font-light"}>
                         {el.title}
                       </div>
                     </div>

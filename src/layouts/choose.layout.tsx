@@ -9,19 +9,19 @@ export const ChooseLayout = () => {
           <div className={"w-full h-full py-14"}>
             <div className={"w-full h-1/2 flex justify-evenly"}>
               <div className={"w-1/4 h-full flex flex-col items-center justify-center"}>
-                <img src="/assets/choose/24_7.svg" alt=""/>
+                <img src="/assets/choose/24_7_new.svg" alt=""/>
                 <h2 className={"lg:text-sm xl:text-base 2xl:text-lg mt-5 text-white font-extralight text-center"}>
                   We are in touch with you 24/7. And it`s OK if you are far from the technical knowledge and terms.
                 </h2>
               </div>
               <div className={"w-1/4 h-full flex flex-col items-center justify-center"}>
-                <img src="/assets/choose/Full_Cycle.svg" alt=""/>
+                <img src="/assets/choose/Full_Cycle_new.svg" alt=""/>
                 <h2 className={"lg:text-sm xl:text-base 2xl:text-lg mt-5 text-white font-extralight text-center"}>
                   We deal with the full development cycle. From the idea to the first client.
                 </h2>
               </div>
               <div className={"w-1/4 h-full flex flex-col items-center justify-center"}>
-                <img src="/assets/choose/Agile.svg" alt=""/>
+                <img src="/assets/choose/Agile_new.svg" alt=""/>
                 <h2 className={"lg:text-sm xl:text-base 2xl:text-lg mt-5 text-white font-extralight text-center"}>
                   We use Agile and SCRUM methodologies in our work.
                 </h2>
@@ -29,14 +29,14 @@ export const ChooseLayout = () => {
             </div>
             <div className={"w-full h-1/2 flex justify-evenly pt-6"}>
               <div className={"xl:w-1/4 h-full flex flex-col items-center justify-center"}>
-                <img src="/assets/choose/NDA.svg" alt=""/>
+                <img src="/assets/choose/NDA_new.svg" alt=""/>
                 <h2 className={"lg:text-sm xl:text-base 2xl:text-lg mt-5 text-white font-extralight text-center"}>
                   All ideas and commercial information will be protected.<br/>
                   We always sign an NDA.
                 </h2>
               </div>
               <div className={"w-1/4 h-full flex flex-col items-center justify-center"}>
-                <img src="/assets/choose/100.svg" alt=""/>
+                <img src="/assets/choose/100_new.svg" alt=""/>
                 <h2 className={"lg:text-sm xl:text-base 2xl:text-lg mt-5 text-white font-extralight text-center"}>
                   We are focused on results and want you to be 100% satisfied.
                 </h2>
