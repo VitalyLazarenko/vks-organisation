@@ -212,12 +212,7 @@ export const AboutLayout = () => {
 
   const GetSkillsItem = (iterator: number, line: string = "line1") => {
     const currentLine = skillTickers[line]
-
-    console.log('currentLine',currentLine);
-
     const selectedSkill = currentLine[iterator]
-
-    console.log('selectedSkill', selectedSkill);
 
     return (
       <div className="flex justify-between items-center">
